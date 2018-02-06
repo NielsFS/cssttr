@@ -1,0 +1,129 @@
+/*algemeen*/
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto'; 
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body> h1 {
+	display: none;
+}
+
+
+/*Begin Header en navigatie*/
+nav > h1 {
+	display: none;
+}
+
+nav {
+	display: inline-block;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+}
+
+nav a:hover {
+	color: gold;
+}
+
+nav > ul {
+	display: flex;
+	flex-direction: row;
+	padding: 1%;
+	margin: 0;
+	justify-content: center;
+	background-color: #26282d;
+	position: relative;
+}
+
+nav > ul li {
+ 	list-style: none;
+ 	padding-right: 1em;
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+}
+
+nav > ul > li > ul  {
+	font-size: 14px;
+	padding: 5px;
+	display: none;
+	position: absolute;
+	background-color: #26282d;
+	margin-top: 20px;
+
+}
+
+nav > ul > li:hover > ul {
+	display: block;
+}
+
+
+/*einde header en navigatie*/
+
+/*begin artikel*/
+
+main > article {
+	max-width: 70%;
+	padding: 5%;
+	margin: 5% auto;
+
+	box-shadow: 3px 9px 37px 0px rgba(0,0,0,0.75);
+	border-radius: 10px;
+
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+	grid-template-areas: 
+	"titel foto" 
+	"tekst foto" ;
+}
+
+article img {
+	grid-area: foto;
+	border-radius: 5%;
+}
+
+article h1 {
+	grid-area: titel;
+	font-size: 2em;
+}
+
+article p {
+	grid-area: tekst;
+}
+
+@media (max-width: 768px) {
+	main > article {
+		grid-template-columns: 1fr;
+		grid-auto-rows: minmax(200px, auto);
+		grid-template-areas: 
+		"foto"
+		"titel"
+		"tekst";
+	}
+}
+/*rating*/
+
+fieldset {
+	
+	width:10%;
+}
