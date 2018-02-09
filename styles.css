@@ -4,6 +4,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto'; 
+	background: linear-gradient(to right, #8c47e0 , #6b32ef);
 }
 
 a {
@@ -20,86 +21,96 @@ body> h1 {
 }
 
 
-/*Begin Header en navigatie*/
-nav > h1 {
+/*navigatie*/
+section > nav > h1 {
 	display: none;
 }
 
-nav {
+section > nav {
 	display: inline-block;
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
 	color: white;
+	position: fixed;
+    top: 0;
 }
 
-nav a {
+section > nav a {
 	text-decoration: none;
 	color: white;
 }
 
-nav a:hover {
+section > nav a:hover {
 	color: gold;
 }
 
-nav > ul {
+section > nav > ul {
 	display: flex;
 	flex-direction: row;
 	padding: 1%;
 	margin: 0;
 	justify-content: center;
-	background-color: #26282d;
+	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
 	position: relative;
 }
 
-nav > ul li {
+section > nav > ul li {
  	list-style: none;
  	padding-right: 1em;
 	display: flex;
 	flex-direction: column;
     align-items: flex-start;
-    font-size: 16px;
+    font-size: 1em;
 }
 
-nav > ul > li > ul  {
-	font-size: 14px;
-	padding: 5px;
+section > nav > ul > li > ul  {
+	font-size: 0.9em;
+	padding: 0.5%;
 	display: none;
 	position: absolute;
-	background-color: #26282d;
+	background: #7e25c6;
+	/*pixel gebruikt omdat hoogte niet mag afwijken van parent <li>*/
 	margin-top: 20px;
-
+	border-radius: 5px;
 }
 
-nav > ul > li:hover > ul {
+
+section > nav > ul > li:focus-within> ul {
 	display: block;
 }
 
+                                               
 
-/*einde header en navigatie*/
+/*grid items*/
 
-/*begin artikel*/
+main {
+	margin-top: 5vh;
+	padding: 10%;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-auto-rows: minmax(250px, 1fr);
+	/*px gebruikt omdat de horizontale en verticale paddings anders afwijkingen krijgen*/
+	grid-gap: 30px;
+}
+
+
+
+/*artikels*/
 
 main > article {
-	max-width: 70%;
 	padding: 5%;
-	margin: 5% auto;
 
 	box-shadow: 3px 9px 37px 0px rgba(0,0,0,0.75);
 	border-radius: 10px;
-
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-gap: 10px;
-	grid-template-areas: 
-	"titel foto" 
-	"tekst foto" ;
+	background: white;
 }
 
 article img {
 	grid-area: foto;
 	border-radius: 5%;
+	height: 100px;
 }
 
 article h1 {
@@ -111,19 +122,10 @@ article p {
 	grid-area: tekst;
 }
 
-@media (max-width: 768px) {
-	main > article {
-		grid-template-columns: 1fr;
-		grid-auto-rows: minmax(200px, auto);
-		grid-template-areas: 
-		"foto"
-		"titel"
-		"tekst";
-	}
-}
-/*rating*/
+
+/*rating breedte tijdelijk*/
 
 fieldset {
+	width: 30px;
 	
-	width:10%;
 }
