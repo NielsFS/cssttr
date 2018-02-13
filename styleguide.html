@@ -12,10 +12,11 @@
 
 
 <body>
-	<h1>Living Styleguide</h1>
+
 <!-- place components or patterns here -->
+
+<!-- begin navigatie -->
     <header>
-        <section>
         	<nav>
         	    <h1>Main navigation</h1>
         	    <ul>
@@ -32,93 +33,110 @@
         	        <li><a href="/contact" >Contact</a></li>
         	    </ul>
         	</nav>
-        </section>
     </header>
+<!-- einde navigatie -->
+  
+
+<!-- begin grid items -->
+ <!-- Article 1 -->
+
+    <h1>Recent Articles</h1>
     <main>
 
- <!-- Article 1 -->
-    	<article>
-    		<h1><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h1>
+    	<a href="/"><article >
+    		<h1>HTML5 accessibility, are block links hurting accessibility?</h1>
 
     		<img src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg" alt="A colorful crayon drawing on the hood of a car." />
 
     		<p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-    	</article>
+    	</article></a>
 
 <!-- Article 2 -->
-        <article>
+        <a href="/"><article >
             <h1>This picture has a title</h1>
-            <figure>
-                <!-- Portrait -->
-                <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
-                
-        <!-- Landscape -->
-        <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
-                 <figcaption>
-                    <p>
-                        There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
-                    </p>
-                    <footer>
-                         <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
-                     </footer>
-                 </figcaption>
-             </figure>
-        </article>
+
+            <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
+
+            <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
+        </article></a>
 
 <!-- Article 3 -->
+        <a href="/"><article >
+            <h1>This picture has a title</h1>
+
+            <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" />
+
+            <p>There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.</p>
+        </article></a>
+    </main>
+<!-- einde van grid items -->
+
+
+<!-- begin chat -->
+<!-- Article 4 -->
+
+      
+    <section>
         <article>
             <form action="/" method="post">
                 <label for="field-email">Email</label>
-                <input type="email" id="field-email" name="field-email" autocomplete="email" required >
+                <input type="email" id="field-email" name="field-email" autocomplete="email" required placeholder="username" >
                 <label for="field-password">Password</label>
-                <input type="password" id="field-password" name="field-password" required>
-                <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
-                <label for="field-stay-logged-in">Stay logged in</label>
+                <input type="password" id="field-password" name="field-password" required placeholder="password">
+                 <button type="submit">Login</button>
+                <span>
+                    <label for="field-stay-logged-in">Stay logged in</label>
+                    <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
+                </span>
                 <a href="/">Forgot password</a>
-                <button type="submit">Login</button>
-            </form>
-        </article>
-
-<!-- Article 4 -->
-        <article>
-            <ol>
-                <li>
-                    <p>
-                        Hey!
-                    </p>
-                    <footer>
-                        <p>Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
-                        <p data-status="READ">Has been read</p>
-                    </footer>
-                </li>
-                <li>
-                    <p>
-                        Hey! Sorry I was busy
-                    </p>
-                    <footer>
-                        <p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
-                    </footer>
-                </li>
-                <li>
-                    <p>
-                        I sent that 2 years ago
-                    </p>
-
-                    <footer>
-                        <p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
-                        <p data-status="DELIVERED">Has been delivered</p>
-                    </footer>
-                </li>
-            </ol>
-            <form action="/" method="post">
-                <label for="field-message">Message</label>
-                <textarea name="field-message" id="field-message"></textarea>
-                <button type="submit">Send</button>
             </form>
         </article>
 
 <!-- Article 5 -->
         <article>
+            <span>
+                <ol>
+                    <li>
+                        <p>
+                            Hey!
+                        </p>
+                        <footer>
+                            <p>Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
+                            <p data-status="READ">Has been read</p>
+                        </footer>
+                    </li>
+                    <li>
+                        <p>
+                            Hey! Sorry I was busy
+                        </p>
+                        <footer>
+                            <p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+                        </footer>
+                    </li>
+                    <li>
+                        <p>
+                            I sent that 2 years ago
+                        </p>
+
+                        <footer>
+                            <p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
+                            <p data-status="DELIVERED">Has been delivered</p>
+                        </footer>
+                    </li>
+                </ol>
+                <span>
+                    <form action="/" method="post">
+                        <label for="field-message">Message</label>
+                        <textarea name="field-message" id="field-message"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </span>
+            </span>
+        </article>
+<!-- einde chat -->
+
+<!-- Article 6 -->
+        <!-- <article>
             <fieldset>
                 <legend>Rating</legend>
                 <input type="radio" name="rating" id="rating-0">
@@ -148,10 +166,10 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"/><path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"/><path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"/><path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"/><g fill="#664e27"><circle cx="20.5" cy="23" r="5"/><circle cx="43.5" cy="23" r="5"/></g></svg>
                 </label>
             </fieldset>
-        </article>
+        </article> -->
 
-<!-- Article 6 -->
-        <article>
+<!-- Article 7 -->
+        <!-- <article>
             <nav>
                 <h1>Finish your order</h1>
                 <progress value="0.25" max="1">25%</progress>
@@ -170,7 +188,7 @@
                     </li>
                 </ol>
             </nav>
-        </article>
-    </main>
+        </article> -->
+    </section>
 </body>
 </html>

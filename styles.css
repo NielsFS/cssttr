@@ -7,6 +7,13 @@ html, body {
 	background: linear-gradient(to right, #8c47e0 , #6b32ef);
 }
 
+a:focus, a:hover {
+	transition: all .2s ease-in-out;
+	transform: scale(1.1); 
+	position: relative;
+	z-index: 10;
+}
+
 a {
 	text-decoration: none;
 	color: black;
@@ -16,36 +23,32 @@ a {
 	box-sizing: border-box;
 }
 
-body> h1 {
-	display: none;
-}
+
 
 
 /*navigatie*/
-section > nav > h1 {
+header > nav > h1 {
 	display: none;
 }
 
-section > nav {
+header > nav {
 	display: inline-block;
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
 	color: white;
 	position: fixed;
+	z-index: 20;
     top: 0;
 }
 
-section > nav a {
+header > nav a {
 	text-decoration: none;
 	color: white;
 }
 
-section > nav a:hover {
-	color: gold;
-}
 
-section > nav > ul {
+header > nav > ul {
 	display: flex;
 	flex-direction: row;
 	padding: 1%;
@@ -55,28 +58,28 @@ section > nav > ul {
 	position: relative;
 }
 
-section > nav > ul li {
+header > nav > ul li {
  	list-style: none;
  	padding-right: 1em;
 	display: flex;
 	flex-direction: column;
     align-items: flex-start;
     font-size: 1em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-section > nav > ul > li > ul  {
+header > nav > ul > li > ul  {
 	font-size: 0.9em;
 	padding: 0.5%;
 	display: none;
 	position: absolute;
 	background: #7e25c6;
-	/*pixel gebruikt omdat hoogte niet mag afwijken van parent <li>*/
-	margin-top: 20px;
-	border-radius: 5px;
+	margin-top: 1.4em;
+	border-radius: 0.3em;
 }
 
 
-section > nav > ul > li:focus-within> ul {
+header > nav > ul > li:focus-within> ul {
 	display: block;
 }
 
@@ -85,43 +88,202 @@ section > nav > ul > li:focus-within> ul {
 /*grid items*/
 
 main {
-	margin-top: 5vh;
-	padding: 10%;
-
+	padding: 10% 10% 15% 10%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-auto-rows: minmax(250px, 1fr);
-	/*px gebruikt omdat de horizontale en verticale paddings anders afwijkingen krijgen*/
-	grid-gap: 30px;
+	grid-gap: 2em;
+	position: relative;
+	overflow: hidden;
 }
 
+main:after {
+	content: "";
+	position: absolute;
+	width: 150%;
+	height: 300px;
+	background-color: white;
+	transform: rotate(-2.5deg);
+	z-index: 0;
+	bottom: -10rem;
+	box-shadow: inset -10px 0px 50px 1px rgba(0,0,0,0.7);
+	margin-left: -10rem;
+}
 
+/*header recent articles*/
+
+body > h1 {
+	color: white;
+	font-size: 3em;
+	padding-top: 5%;
+	padding-left: 10%;
+	margin-bottom: -5%;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
 
 /*artikels*/
 
-main > article {
+main article {
 	padding: 5%;
-
-	box-shadow: 3px 9px 37px 0px rgba(0,0,0,0.75);
-	border-radius: 10px;
+	height: 100%;
+	border-radius: 1em;
 	background: white;
+	position: relative;
+	z-index: 10; 
 }
 
 article img {
-	grid-area: foto;
 	border-radius: 5%;
 	height: 100px;
 }
 
 article h1 {
-	grid-area: titel;
 	font-size: 2em;
 }
 
-article p {
-	grid-area: tekst;
+article {
+	box-shadow: 3px 9px 37px 0px rgba(0,0,0,0.4);
+	border-radius: 1em;
 }
 
+
+ /*login & chat*/
+section {
+	background-color: white;
+	padding: 5% 10% 10% 10%;
+ 	display: grid;
+ 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-auto-rows: minmax(250px, 1fr);
+	grid-gap: 3em;
+	position: relative;
+	z-index: 0;
+}
+
+	/*login*/
+section > article > form {
+		display: flex;
+		flex-direction: column;
+		padding: 5%;
+		margin: 0;
+		justify-content: center;
+		background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
+		position: relative;
+		height:100%;
+		border-radius: 10px;
+		text-align: center;
+
+}
+
+section > article > form input, button { 
+	border-radius: 5px;
+	height: 10%;
+	border-color: white;
+}
+
+section > article > form input {
+	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+	opacity: 0.5;
+}
+
+section > article > form input:hover, input:focus {
+	opacity: 1;
+}
+
+::placeholder {
+	color: white;
+}
+
+
+section > article > form button {
+	width: 50%;
+	margin: 5% auto;
+
+}
+
+section > article > form > label {
+	display: none;
+}
+
+section > article > form span {
+	display: flex;
+	flex-direction: row;
+	color: white;
+	margin: 0 auto;
+}
+
+section > article > form a {
+	color: white;
+}
+
+/*chat*/
+
+section > article > span {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	justify-content: center;
+	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
+	position: relative;
+	border-radius: 10px;
+	text-align: center;
+}
+
+section > article > span label {
+	display: none;
+}
+
+span > span form {
+	display: flex;
+	flex-direction: row;
+}
+
+span > span > form button, textarea {
+	width: 100%;
+	height: 5em;	
+	background: grey;
+	border-radius: 0;
+	border-color: white;
+}
+
+span > span > form > button {
+	width: 30%;
+	border-radius: 0 0 10px 0;
+	background-color: green;
+	color: white;
+}
+
+span > span > form > textarea {
+	border-radius: 0 0 0 10px;
+	background-color: white;
+	resize: none;
+
+}
+
+span > ol p, ol {
+	color: white;
+	list-style: none;
+	padding-right: 5%;
+}
+
+span > ol li:nth-child(even) {
+	text-align: right;
+}
+
+span > ol li:nth-child(odd) {
+	text-align: left;
+}
+
+span footer p {
+	opacity: 0.5;
+	font-size: 0.7em;
+	/*line-height: 0.3;*/
+}
 
 /*rating breedte tijdelijk*/
 
