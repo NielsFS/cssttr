@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" src="https://pixabay.com/photo-1539630/">
 </head>
-
 
 <body>
 
@@ -30,8 +30,6 @@
         	                <li><a href="#" >Crowns</a></li>
         	            </ul>
         	        </li>
-        	        
-        	        <!-- <li><a href="/contact" >Contact</a></li> -->
         	    </ul>
         	</nav>
     </header>
@@ -41,8 +39,8 @@
 <!-- begin grid items -->
  <!-- Article 1 -->
 
-    <h1>Recent Articles</h1><a name="articles"></a>
-    <main>
+    <h1>Recent Articles</h1><!-- <a name="articles"></a> -->
+    <main id="articles">
         <a href="#">
             <article >
                 <img src="https://www.promnite.com/-/media/products/pn/royalty/crowns/mt103gdpe-reign-supreme-mens-crown-purple-000.ashx?w=450&h=450&bc=ffffff" />
@@ -52,61 +50,149 @@
                 <p>
                     Purple dye was historically very expensive and incredibly hard to come by. Therefore, allowing only the rich and powerful to garnish it. “Born to the purple” meaning born into a royal or noble family.
                 </p>
+                <fieldset>
+			        <legend>Rating</legend>
+
+			        <input type="radio" name="rating" id="rating-0">
+			        <label for="rating-0">
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ef5350"/><path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"/><path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"/><g fill="#302424"><path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"/><path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"/></g><path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"/><g fill="#302424"><path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"/><path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-1">
+			        <label for="rating-1">
+			           
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"/><g fill="#664e27"><circle cx="42.4" cy="24.7" r="5"/><circle cx="19.7" cy="28.7" r="5"/><path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-2">
+			        <label for="rating-2">
+			           
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><g fill="#664e27"><circle cx="20.5" cy="26.6" r="5"/><circle cx="43.5" cy="26.6" r="5"/><path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-3">
+			        <label for="rating-3">
+			        
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"/><path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"/><path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"/><path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"/><g fill="#664e27"><circle cx="20.5" cy="23" r="5"/><circle cx="43.5" cy="23" r="5"/></g></svg>
+			        </label>
+			    </fieldset>
      	    </article>
          </a>
 
 <!-- Article 2 -->
-        <a href="#"><article >
-            <img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/workingmemor.jpg" />
-            <h1>
-                Did you know that the color purple can have an affect on people physically?
-            </h1>
+        <a href="#">
+        	<article >
+	            <img src="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/workingmemor.jpg" />
+	            <h1>
+	                Did you know that the color purple can have an affect on people physically?
+	            </h1>
 
-            <p>
-                + Calms the nerves and the mind<br>
-                + Uplifting<br>
-                + Offers creativity<br>
-                + Encourages spirituality<br>
-            </p>
-        </article></a>
+	            <p>
+	                + Calms the nerves and the mind<br>
+	                + Uplifting<br>
+	                + Offers creativity<br>
+	                + Encourages spirituality<br>
+	            </p>
+	            <fieldset>
+			        <legend>Rating</legend>
+
+
+			        <input type="radio" name="rating" id="rating-4">
+			        <label for="rating-4">
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ef5350"/><path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"/><path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"/><g fill="#302424"><path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"/><path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"/></g><path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"/><g fill="#302424"><path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"/><path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-5">
+			        <label for="rating-5">
+			           
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"/><g fill="#664e27"><circle cx="42.4" cy="24.7" r="5"/><circle cx="19.7" cy="28.7" r="5"/><path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-6">
+			        <label for="rating-6">
+
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><g fill="#664e27"><circle cx="20.5" cy="26.6" r="5"/><circle cx="43.5" cy="26.6" r="5"/><path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-7">
+			        <label for="rating-7">
+			        
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"/><path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"/><path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"/><path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"/><g fill="#664e27"><circle cx="20.5" cy="23" r="5"/><circle cx="43.5" cy="23" r="5"/></g></svg>
+			        </label>
+			    </fieldset>
+        	</article>
+    	</a>
 
 <!-- Article 3 -->
-        <a href="#"><article >
-            <img src="http://cdn2.bigcommerce.com/server3700/fxxw4to/products/158/images/4669/purple_carrot__76232.1469936438.500.750.jpg?c=2" />
-            <h1>
-                Carrots used to be purple, now most are orange!
-            </h1>
-            <p>
-                There are many theories as to how and why most carrots are now orange. As far as we can tell, the Dutch have something to do with it. As the story goes 17th century Dutch farmers started to cross-breed specifically for orange carrots in honor of their ruler, William of Orange. 
-            </p>
-        </article></a>
+        <a href="#">
+	        <article >
+	            <img src="http://cdn2.bigcommerce.com/server3700/fxxw4to/products/158/images/4669/purple_carrot__76232.1469936438.500.750.jpg?c=2" />
+	            <h1>
+	                Carrots used to be purple, now most are orange!
+	            </h1>
+	            <p>
+	                There are many theories as to how and why most carrots are now orange. As far as we can tell, the Dutch have something to do with it. As the story goes 17th century Dutch farmers started to cross-breed specifically for orange carrots in honor of their ruler, William of Orange. 
+	            </p>
+	            <fieldset>
+			        <legend>Rating</legend>
+			        <input type="radio" name="rating" id="rating-8">
+			        <label for="rating-8">
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ef5350"/><path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"/><path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"/><g fill="#302424"><path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"/><path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"/></g><path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"/><g fill="#302424"><path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"/><path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-9">
+			        <label for="rating-9">
+			           
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"/><g fill="#664e27"><circle cx="42.4" cy="24.7" r="5"/><circle cx="19.7" cy="28.7" r="5"/><path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-10">
+			        <label for="rating-10">
+			           
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><g fill="#664e27"><circle cx="20.5" cy="26.6" r="5"/><circle cx="43.5" cy="26.6" r="5"/><path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"/></g></svg>
+			        </label>
+
+
+			        <input type="radio" name="rating" id="rating-11">
+			        <label for="rating-11">
+			        
+			            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"/><path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"/><path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"/><path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"/><g fill="#664e27"><circle cx="20.5" cy="23" r="5"/><circle cx="43.5" cy="23" r="5"/></g></svg>
+			        </label>
+			    </fieldset>
+	        </article>
+    	</a>
     </main>
 <!-- einde van grid items -->
 
 
 <!-- begin chat -->
-<!-- Article 4 -->
 
-<a name="forum"></a>
-    <section> 
+    <section id = "forum"> 
         <article>
             <form action="/" method="post">
                 <label for="field-email">Email</label>
-                <input type="email" id="field-email" name="field-email" autocomplete="email" required placeholder="username" >
+                <input type="email" id="field-email" name="field-email" autocomplete="email" required placeholder="email@example.com" >
                 <label for="field-password">Password</label>
-                <input type="password" id="field-password" name="field-password" required placeholder="password">
+                <input type="password" id="field-password" name="field-password" required placeholder="*****">
                  <button type="submit">Login</button>
                 <span>
                     <label for="field-stay-logged-in">Stay logged in</label>
                     <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
                 </span>
-                <a href="/">Forgot password</a>
+                <a href="/">Forgot password?</a>
             </form>
         </article>
 
-<!-- Article 5 -->
         <article>
-            <span>
+            <section>
                 <ol>
                     <li>
                         <p>
@@ -136,78 +222,52 @@
                         </footer>
                     </li>
                 </ol>
-                <span>
                     <form action="/" method="post">
                         <label for="field-message">Message</label>
                         <textarea name="field-message" id="field-message"></textarea>
+                       
                         <button type="submit">Send</button>
                     </form>
-                </span>
-            </span>
+            </section>
         </article>
     </section>
 <!-- einde chat -->
 
-<!-- Article 6 -->
-        <!-- <article>
-            <fieldset>
-                <legend>Rating</legend>
-                <input type="radio" name="rating" id="rating-0">
-                <label for="rating-0">
-                    Sad!
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ef5350"/><path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"/><path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"/><g fill="#302424"><path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"/><path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"/></g><path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"/><g fill="#302424"><path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"/><path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"/></g></svg>
-                </label>
 
 
-                <input type="radio" name="rating" id="rating-1">
-                <label for="rating-1">
-                    Meh
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"/><g fill="#664e27"><circle cx="42.4" cy="24.7" r="5"/><circle cx="19.7" cy="28.7" r="5"/><path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"/></g></svg>
-                </label>
+	<!-- Article 7 -->
+	<footer > 
+	      <h1 id = "products">Finish your order</h1>
+	        <article>
+	            <span>
+	                <img src="https://i.pinimg.com/originals/ba/c2/96/bac296a6cbc1dcb40a15147ad500f7d5.jpg" alt="A purple hat" />
+	            </span>
+	            <footer>
+	                <button>Proceed Order</button>
+	                <img src="http://www.icon100.com/up/1700/512/cart.png">
+	                <progress value="0.25" max="1">25%</progress>
+	                <ol>
+	                    <li>
+	                       Cart
+	                    </li>
+	                    <li>
+	                        Address
+	                    </li>
+	                    <li>
+	                        Payment
+	                    </li>
+	                    <li>
+	                        Confirm
+	                    </li>
+	                </ol>
+	               
+	            </footer>
+	        </article>
+	</footer>
+ 
 
+<!-- javascript snippet die zorgt voor smoothscrolling. Ik vond het toevoegen hiervan belangrijk omdat een single page website met navigatie binnen die pagina tegenwoordig gewoon smoothscrolling nodig heeft. Anders ziet het er heel gek uit -->
+ <script src="script.js"></script>
 
-                <input type="radio" name="rating" id="rating-2">
-                <label for="rating-2">
-                    Nice
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><g fill="#664e27"><circle cx="20.5" cy="26.6" r="5"/><circle cx="43.5" cy="26.6" r="5"/><path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"/></g></svg>
-                </label>
-
-
-                <input type="radio" name="rating" id="rating-3">
-                <label for="rating-3">
-                    Fantastic!
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"/><path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"/><path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"/><path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"/><g fill="#664e27"><circle cx="20.5" cy="23" r="5"/><circle cx="43.5" cy="23" r="5"/></g></svg>
-                </label>
-            </fieldset>
-        </article> -->
-
-<!-- Article 7 -->
-<footer> <a name="products"></a>
-      <h1>Finish your order</h1>
-        <article>
-            <span>
-                <img src="https://i.pinimg.com/originals/ba/c2/96/bac296a6cbc1dcb40a15147ad500f7d5.jpg" alt="A purple hat" />
-            </span>
-            <footer>
-                <button>Proceed Order</button>
-                <img src="http://www.icon100.com/up/1700/512/cart.png">
-                <ol>
-                    <li>
-                       Cart
-                    </li>
-                    <li>
-                        Address
-                    </li>
-                    <li>
-                        Payment
-                    </li>
-                    <li>
-                        Confirm
-                    </li>
-                </ol>
-                <progress value="0.25" max="1">25%</progress>
-            </footer>
-        </article>
-</footer>
 </body>
 </html>

@@ -1,64 +1,65 @@
 /*algemeen*/
 
-html, body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto'; 
-	background: linear-gradient(to right, #8c47e0 , #6b32ef);
+* {
+	box-sizing: border-box;
 }
 
-a:focus, a:hover, button:hover, button:focus{
-	
-	transform: scale(1.1); 
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', 'sans-serif'; 
+	background: linear-gradient(to right, #8c47e0 , #6b32ef);
 }
 
 a {
 	text-decoration: none;
 	color: black;
-
 	transition: all .2s ease-in-out;
+	position: relative;
+	z-index: 10; /*zorgt er voor dat elementen niet over andere elementen zichtbaar zijn tijdens transitie*/
 }
+
+a:focus, a:hover, button:hover, button:focus {
+	transform: scale(1.1); 
+	position: relative;
+	z-index: 10;
+}
+
+nav a:hover, nav a:focus {
+	transform: scale(1.3); 
+}
+
+/*Alle elementen die geselecteerd kunnen worden hebben al een transform. Qua design vind ik het daarom mooier om geen outline te hebben.*/
+:focus {
+ 	outline: none;
+ }
 
 button {
 	transition: all .2s ease-in-out;
 }
 
-* {
-	box-sizing: border-box;
-}
-
-:focus {
- 	outline: none;
- }
-
-
-
-
 /*navigatie*/
-header > nav > h1 {
-	display: none;
-}
-
 header {
 	
-	z-index: 999999;
+	z-index: 20;
 	position: -webkit-sticky; 
     position: sticky;
  	top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;/*zorgt er voor dat je door header heen kan klikken*/
 }
 
-header > nav {
-	
+nav h1 {
+	display: none;
 }
 
-nav li, ul {
+nav li, nav ul {
 	list-style-type: none;
 	text-decoration: none;
 	padding-left: 0;
-
+	pointer-events: auto;/*zorgt er voor dat je op de nav li elementen kan klikken*/
 }
 
 nav ul {
@@ -70,8 +71,6 @@ nav ul li {
 	padding-right: 1em;
 	padding-top: 1em;
 }
-
-
 
 nav > ul > li ul {
 	display: none;
@@ -92,85 +91,13 @@ nav li a {
 	background: linear-gradient(to right, #7e25c6CC, #4a24c6CC);
 	color: white;
 	font-size: 0.85em;
-
 }
-
 
 header > nav > ul > li:focus-within ul, li:hover ul {
 	display: block;
 }
-
-/*header > nav {
-	display: inline-block;
-	margin: 0 auto;
-	width: 100%;
-	text-align: center;
-	color: white;
-	position: fixed;
-	z-index: 9999999;
-    top: 0;
-}
-
-header > nav a {
-	text-decoration: none;
-	color: white;
-	border: solid;
-    border-width: 2px
-    border-color: white;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    text-align: center;
-    vertical-align: middle;
-    margin: auto;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-header > nav > ul {
-	display: flex;
-	flex-direction: row;
-	padding: 1%;
-	margin: 0;
-	justify-content: center;
-	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
-	position: relative;
-}
-
-header > nav > ul li {
- 	list-style: none;
- 	padding-right: 1em;
-	display: flex;
-	flex-direction: column;
-    align-items: flex-start;
-    font-size: 1em;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    padding: 0;
-    
-
-}
-
-header > nav > ul > li > ul  {
-	font-size: 0.9em;
-	padding: 0.5%;
-	display: none;
-	position: absolute;
-	background: #7e25c6;
-	margin-top: 1.4em;
-	border-radius: 0.3em;
-}
-*/
-
-
-
-                                               
-
-/*grid items*/
+                                         
+/*grid artikels*/
 
 main {
 	padding: 10% 10% 15% 10%;
@@ -182,6 +109,7 @@ main {
 	overflow: hidden;
 }
 
+/*schuine rand onde*/
 main:after {
 	content: "";
 	position: absolute;
@@ -218,6 +146,7 @@ main article {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
 }
 
 
@@ -225,11 +154,10 @@ article > img {
 	border-radius: 5%;
 	height: 250px;
 	object-fit: contain;
-/*	flex: 3;*/
 }
 
 article > h1 {
-	font-size: 2em;
+	font-size: 1.5em;
 	flex: 1;
 }
 
@@ -243,6 +171,36 @@ article {
 }
 
 
+/*rating*/
+
+fieldset {
+	border: none;
+	text-align: center;
+	margin-bottom: -1em;
+	margin-left: -1em;
+}
+
+fieldset svg {
+	width: 2em;
+	cursor: pointer;
+}
+
+fieldset input {
+	opacity: 0;
+
+}
+
+fieldset legend {
+	display: none;
+	text-align: center;
+}
+
+input:focus + label svg {
+	transition: all .2s ease-in-out;
+	transform: scale(1.8); 
+}
+
+
  /*login & chat*/
 section {
 	background-color: white;
@@ -252,42 +210,42 @@ section {
 	grid-auto-rows: minmax(250px, 1fr);
 	grid-gap: 3em;
 	position: relative;
-	z-index: 999;
+	z-index: 5;
 }
 
 	/*login*/
 section > article > form {
-		display: flex;
-		flex-direction: column;
-		padding: 5%;
-		margin: 0;
-		justify-content: center;
-		background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
-		position: relative;
-		height:100%;
-		border-radius: 1em;
-		text-align: center;
-
+	display: flex;
+	flex-direction: column;
+	padding: 5%;
+	margin: 0;
+	justify-content: center;
+	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
+	position: relative;
+	height:100%;
+	border-radius: 1em;
 }
 
-section > article > form input, button { 
-	border-radius: 5px;
-	height: 10%;
-	border-color: white;
-}
-
-section > article > form input {
+article > form input {
 	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
 	text-align: center;
 	color: white;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	opacity: 0.5;
+	margin-bottom: 0.5em;
+	border-radius: 0.3em;
+	border-width: 0.15em;
 }
 
-section > article > form input:hover, input:focus {
+form > a {
+	text-align: center;
+	text-decoration: underline;
+}
+
+form input:hover, form input:focus {
 	opacity: 1;
 }
 
@@ -295,34 +253,43 @@ section > article > form input:hover, input:focus {
 	color: white;
 }
 
-
 section > article > form button {
-	width: 50%;
+	width: 40%;
 	margin: 5% auto;
-
+	color: #4a24c6;
+	background: white;
+	padding: 0.8em ;
+	line-height: 0;
+	font-size: 1em;
+	box-shadow: -2px 3px 7px 0px rgba(0,0,0,0.2);
+	border: none;
+	border-radius: 0.5em;
 }
 
-section > article > form > label {
-	display: none;
+article > form > label {
+	font-size: 0.85em;
+	color: #ffffff80;
 }
 
-section > article > form span {
+article > form span {
 	display: flex;
 	flex-direction: row;
 	color: white;
 	margin: 0 auto;
+	text-decoration: underline;
 }
 
-section > article > form a {
+ article > form a {
 	color: white;
 }
 
 /*chat*/
 
-section > article > span {
+section > article > section {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
+	padding: 0;
 	justify-content: center;
 	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
 	position: relative;
@@ -330,16 +297,16 @@ section > article > span {
 	text-align: center;
 }
 
-section > article > span label {
+section > article > section > form > label {
 	display: none;
 }
 
-span > span form {
+section > form {
 	display: flex;
 	flex-direction: row;
 }
 
-span > span > form button, textarea {
+section > form button, textarea {
 	width: 100%;
 	height: 5em;	
 	background: grey;
@@ -347,35 +314,35 @@ span > span > form button, textarea {
 	border-color: white;
 }
 
-span > span > form > button {
+section > form > button {
 	width: 30%;
 	border-radius: 0 0 1em 0;
 	background-color: green;
 	color: white;
 }
 
-span > span > form > textarea {
+section > form > textarea {
 	border-radius: 0 0 0 1em;
 	background-color: white;
 	resize: none;
 
 }
 
-section > article > span > ol p, ol {
+section > article > section > ol p, ol {
 	color: white;
 	list-style: none;
 	padding-right: 5%;
 }
 
-section > article > span > ol li:nth-child(even) {
+section > article > section > ol li:nth-child(even) {
 	text-align: right;
 }
 
-section > article > span > ol li:nth-child(odd) {
+section > article > section > ol li:nth-child(odd) {
 	text-align: left;
 }
 
-span footer p {
+section footer p {
 	opacity: 0.5;
 	font-size: 0.7em;
 }
@@ -384,8 +351,6 @@ section article {
 	position: relative;
 	z-index: 0;
 }
-
-
 
 /*finish purchase*/
 
@@ -406,28 +371,21 @@ body > footer:after {
 	height: 300px;
 	background-color: white;
 	transform: rotate(-2.5deg);
-	z-index: 200000;
 	top: -10rem;
 	box-shadow: inset -30px -30px 55px -30px rgba(0,0,0,0.7);
 	margin-left: 
-
 }
-
 
 footer > article {
 	position: relative;
 	margin-top: 20%;
 	border-radius: 1em;
-	z-index: 999;
 	box-shadow: none;
-
 	display: inline-flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
-
 }
-
 
 footer > article > span {
 	width: 300px;
@@ -435,7 +393,6 @@ footer > article > span {
 	box-shadow: 3px 7px 35px 0px rgba(0,0,0,0.4);
 	background: white;
 	border-radius: 1em 0 0 1em;
-
 }
 
 footer > article > footer {
@@ -472,8 +429,6 @@ progress {
 	border-radius: 0 0 1em 0;
 }
 
-
-
 progress::-webkit-progress-value { 
 	background: linear-gradient(to right, #8c47e0 , #6b32ef); 
 	border-radius: 0 1em 1em 0;
@@ -483,11 +438,9 @@ progress::-webkit-progress-bar {
 	background: white;
 }
 	
-
 footer > h1 {
 	margin-top: 4em;
 	margin-bottom: -10%;
-	z-index: 9999;
 	color: white;
 	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 	font-size: 3em;
@@ -504,13 +457,12 @@ article > footer > ol {
 	margin-left: -0.2em;
 }
 
-
 article > footer > ol > li {
-		color: black;
-		padding: 0 0.5em 0 0.5em;
-		margin-bottom: -0.35em;
-		font-weight: lighter;
-		font-size: 14px;
+	color: black;
+	padding: 0 0.5em 0 0.5em;
+	margin-bottom: -0.35em;
+	font-weight: lighter;
+	font-size: 14px;
 }
 
 article > footer > ol > li:nth-child(1) {
@@ -532,23 +484,18 @@ footer > button {
 	font-size: 1em;
 	box-shadow: -2px 3px 7px 0px rgba(0,0,0,0.2);
 	border: none;
-}
-/*rating breedte tijdelijk*/
-
-fieldset {
-	width: 30px;
-	
+	border-radius: 0.5em;
 }
 
-
+/*media querries*/
 
 @media screen and (max-width: 749px) {
 	footer > article > footer {
-		border-radius: 0 0 1em 1em;
+	border-radius: 0 0 1em 1em;
 		
 	}
 	footer > article > span {
-		border-radius: 1em 1em 0 0;
+	border-radius: 1em 1em 0 0;
 	}
 
 	progress::-webkit-progress-bar { 
@@ -558,9 +505,8 @@ fieldset {
 	progress::-webkit-progress-value { 
 	border-radius: 0 1em 1em 1em;
 	}
-
-
 }
+
 
 
 
