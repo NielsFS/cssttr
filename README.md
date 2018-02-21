@@ -46,3 +46,17 @@ week 2:
 	- Ik wil proberen de pagina nog interactiever te maken
 
 week 3:
+
+	Ik heb me veel gefocust op het meer DRY maken van mijn code. Dat is grotendeels gelukt. IK heb een aantal rare HTML elementen die ik had toegevoegd weer weggehaald. Had overal Span elementen omheen gedaan wat niet de bedoeling was. Ook heb ik het laatste component gestyled: de rating. Ik wilde eerst een soort pop-up window maken en daar dan de rating bij laten zien. Dat zou voor mij echter nogal tijdsintensief zijn geweest dus ik heb dat laten zitten en heb meer tijd aan andere dingen besteed
+
+Recap:
+
+	Ik ben over het algemeen best tevreden over wat ik heb gemaakt. Het is niet een super toffe mega functionele website geworden, maar als eerste eindproduct vind ik het wel mooi genoeg en volgens de richtlijnen. Zelf stond ik ook in week 2 erg versteld dat ik opeens flexbox en grid helemaal kon benutten om snel elementen te stylen. Dingen waar ik in het begin moeite mee had gingen me in week 3 goed af. Heb voor mijn gevoel echt een flinke sprong in kennis gemaakt. Ook door de restrecties heb ik meer geleerd over hoe het selecteren van html elementen met css in zijn werk gaat.
+
+	Waar ik trots op ben:
+
+		- flexibele pagina met herrangschikken van elementen zonder gebruik van media querries (met enkele uitzonderingen)
+		- Het begrijpen en kunnen gebruiken van grid layout
+		- gemakkelijk sticky navs maken en uitlijnen
+		- Gebruik maken van transities
+

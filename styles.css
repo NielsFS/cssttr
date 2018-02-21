@@ -7,7 +7,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Roboto', 'sans-serif'; 
+	font-family: 'Roboto', Arial, Helvetica, sans-serif; 
 	background: linear-gradient(to right, #8c47e0 , #6b32ef);
 }
 
@@ -29,9 +29,9 @@ nav a:hover, nav a:focus {
 	transform: scale(1.3); 
 }
 
-/*Alle elementen die geselecteerd kunnen worden hebben al een transform. Qua design vind ik het daarom mooier om geen outline te hebben.*/
-:focus {
- 	outline: none;
+
+:focus { 
+ 	outline: none;/*Alle elementen die geselecteerd kunnen worden hebben al een transform. Qua design vind ik het daarom mooier om geen outline te hebben.*/
  }
 
 button {
@@ -55,16 +55,13 @@ nav h1 {
 	display: none;
 }
 
-nav li, nav ul {
+nav ul {
+	display: flex;
+	display: relative;
 	list-style-type: none;
 	text-decoration: none;
 	padding-left: 0;
 	pointer-events: auto;/*zorgt er voor dat je op de nav li elementen kan klikken*/
-}
-
-nav ul {
-	display: flex;
-	display: relative;
 }
 
 nav ul li {
@@ -78,12 +75,13 @@ nav > ul > li ul {
 	text-indent: 0;
 }
 
+
 nav li a {
 	border: solid;
-	border-width: 1px;
+	border-width: 0.1em;
 	border-color: #ffffffCC;
-	height: 65px;
-	width: 65px;
+	height: 5em;
+	width: 5em;
 	display: flex;			
 	justify-content: center;
 	align-items: center;
@@ -93,7 +91,7 @@ nav li a {
 	font-size: 0.85em;
 }
 
-header > nav > ul > li:focus-within ul, li:hover ul {
+ li:focus-within ul, li:hover ul {
 	display: block;
 }
                                          
@@ -109,18 +107,19 @@ main {
 	overflow: hidden;
 }
 
-/*schuine rand onde*/
+/*schuine rand onder*/
 main:after {
 	content: "";
 	position: absolute;
-	width: 150%;
-	height: 300px;
+	width: 180%;
+	height: 18em;
 	background-color: white;
 	transform: rotate(-2.5deg);
 	z-index: 0;
 	bottom: -10rem;
 	box-shadow: inset -10px 0px 50px 1px rgba(0,0,0,0.7);
 	margin-left: -10rem;
+	margin-right: -10rem;
 }
 
 /*header recent articles*/
@@ -201,7 +200,7 @@ input:focus + label svg {
 }
 
 
- /*login & chat*/
+ /*login & chat sectie*/
 section {
 	background-color: white;
 	padding: 5% 10% 5% 10%;
@@ -238,6 +237,7 @@ article > form input {
 	margin-bottom: 0.5em;
 	border-radius: 0.3em;
 	border-width: 0.15em;
+	border-color: white;
 }
 
 form > a {
@@ -297,13 +297,13 @@ section > article > section {
 	text-align: center;
 }
 
-section > article > section > form > label {
-	display: none;
-}
-
 section > form {
 	display: flex;
 	flex-direction: row;
+}
+
+section > form > label {
+	display: none;
 }
 
 section > form button, textarea {
@@ -328,11 +328,16 @@ section > form > textarea {
 
 }
 
-section > article > section > ol p, ol {
+section > ol {
+	list-style: none;
+}
+
+section > ol p{
 	color: white;
 	list-style: none;
 	padding-right: 5%;
 }
+
 
 section > article > section > ol li:nth-child(even) {
 	text-align: right;
@@ -368,12 +373,11 @@ body > footer:after {
 	content: "";
 	position: absolute;
 	width: 250%;
-	height: 300px;
+	height: 18em;
 	background-color: white;
 	transform: rotate(-2.5deg);
 	top: -10rem;
 	box-shadow: inset -30px -30px 55px -30px rgba(0,0,0,0.7);
-	margin-left: 
 }
 
 footer > article {
@@ -455,6 +459,8 @@ article > footer > ol {
 	position: absolute;
 	bottom: -0.5em;
 	margin-left: -0.2em;
+	list-style: none;
+	padding-right: 5%;
 }
 
 article > footer > ol > li {
@@ -462,7 +468,7 @@ article > footer > ol > li {
 	padding: 0 0.5em 0 0.5em;
 	margin-bottom: -0.35em;
 	font-weight: lighter;
-	font-size: 14px;
+	font-size: 0.9em;
 }
 
 article > footer > ol > li:nth-child(1) {
@@ -490,10 +496,11 @@ footer > button {
 /*media querries*/
 
 @media screen and (max-width: 749px) {
+
 	footer > article > footer {
 	border-radius: 0 0 1em 1em;
-		
 	}
+
 	footer > article > span {
 	border-radius: 1em 1em 0 0;
 	}
@@ -504,6 +511,18 @@ footer > button {
 
 	progress::-webkit-progress-value { 
 	border-radius: 0 1em 1em 1em;
+	}
+
+	main {
+		padding-bottom: 15em;
+	}
+
+	main article h1 {
+		font-size: 1.5em;
+	}
+
+	a:focus, a:hover, button:hover, button:focus {
+	transform: scale(1); 
 	}
 }
 
