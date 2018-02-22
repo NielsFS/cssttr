@@ -94,6 +94,31 @@ nav li a {
  li:focus-within ul, li:hover ul {
 	display: block;
 }
+
+/*extending clickable area nav sub menu*/
+nav a {
+	position: relative;
+}
+
+nav > ul > li > ul a::before {
+	content: "";
+	position: absolute;
+	
+	top: -5px;
+	bottom: -5px;
+	right: -20px;
+	left: -20px;
+}
+
+nav > ul > li > a::before {
+	content: "";
+	position: absolute;
+	
+	top: -20px;
+	bottom: -20px;
+	right: -5px;
+	left: -5px;
+}
                                          
 /*grid artikels*/
 
@@ -113,13 +138,13 @@ main:after {
 	position: absolute;
 	width: 180%;
 	height: 18em;
-	background-color: white;
 	transform: rotate(-2.5deg);
 	z-index: 0;
 	bottom: -10rem;
 	box-shadow: inset -10px 0px 50px 1px rgba(0,0,0,0.7);
 	margin-left: -10rem;
 	margin-right: -10rem;
+	background-color: white;
 }
 
 /*header recent articles*/
@@ -194,7 +219,7 @@ fieldset legend {
 	text-align: center;
 }
 
-input:focus + label svg {
+fieldset input:focus + label svg {
 	transition: all .2s ease-in-out;
 	transform: scale(1.8); 
 }
@@ -202,7 +227,6 @@ input:focus + label svg {
 
  /*login & chat sectie*/
 section {
-	background-color: white;
 	padding: 5% 10% 5% 10%;
  	display: grid;
  	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -210,6 +234,7 @@ section {
 	grid-gap: 3em;
 	position: relative;
 	z-index: 5;
+	background-color: white;
 }
 
 	/*login*/
@@ -245,7 +270,7 @@ form > a {
 	text-decoration: underline;
 }
 
-form input:hover, form input:focus {
+form > input:hover, form > input:focus {
 	opacity: 1;
 }
 
@@ -283,6 +308,41 @@ article > form span {
 	color: white;
 }
 
+input[type="checkbox"] + label::before { 
+	content: '\a0'; 
+	display: inline-block; 
+	vertical-align: .2em;
+	width: 1em;
+	height: 1em; 
+	margin-right: .5em; 
+	margin-bottom: 0.5em;
+	border-radius: .2em; 
+	background: silver; 
+	text-indent: .15em; 
+	line-height: .65;
+}
+
+input[type="checkbox"]:checked + label::before {
+	content: '👍';
+	border-radius: 1em;
+	border: solid;
+	border-width: 0.1em;
+	border-color: limegreen;
+	background: white;
+	
+
+	padding-top: 0.5em;
+	padding-right: 0.5em;
+	padding-left: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+input[type="checkbox"] { 
+	opacity: 0;
+	margin-left: -1em;
+}
+
+
 /*chat*/
 
 section > article > section {
@@ -291,10 +351,16 @@ section > article > section {
 	margin: 0;
 	padding: 0;
 	justify-content: center;
-	background: linear-gradient(to right, #4a24c6, #7e25c6 , #4a24c6);
 	position: relative;
 	border-radius: 1em;
 	text-align: center;
+
+	background: #6600cc;
+	background-image:
+	    linear-gradient(90deg, #5900b3 11px, transparent 0),
+	    linear-gradient(90deg, #7300e6 23px, transparent 0),
+	    linear-gradient(90deg, #5900b3 41px, transparent 0);
+		background-size: 41px 100%, 61px 100%, 83px 100%;
 }
 
 section > form {
@@ -355,6 +421,48 @@ section footer p {
 section article {
 	position: relative;
 	z-index: 0;
+}
+
+
+/*loading spinner*/
+
+figure {
+	height: 7em;
+	width: 7em;
+	max-width: 7em;
+	max-height: 7em;
+
+	border: solid;
+	border-width: 0.3em;
+	border-color: silver;
+	border-top-color: white;
+	border-radius: 50%;
+	position: absolute;
+	background-color:#ffffff33;
+	
+
+	right: 0;
+	left: 0;
+	margin: auto;
+	
+}
+
+figure {
+	animation: round 1s linear infinite;
+
+}
+
+section> article > section h1 {
+	right: 0;
+	left: 0;
+	margin: auto;
+	color: white;
+	position: absolute;
+}
+
+@keyframes round {
+	from{transform: rotate(0deg)}
+	to {transform: rotate(360deg)}
 }
 
 /*finish purchase*/
